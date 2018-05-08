@@ -1,3 +1,6 @@
+#set local english
+Sys.setlocale("LC_ALL","English")
+
 #import the data
 df <- read.csv("household_power_consumption.txt",sep = ";", stringsAsFactors = FALSE)
 #add correct column formats
@@ -16,9 +19,7 @@ rm(df)
 #create device
 png(filename ="plot2.png", width = 480, height = 480, units = "px")
 #create plot
-plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black", xlab = "", ylab = "Global Active Power (kilowwatts")
-lines(sub_df$DateTime, sub_df$Sub_metering_2, col = "red")
-lines(sub_df$DateTime, sub_df$Sub_metering_3, col = "blue")
+plot(sub_df$DateTime, sub_df$Global_active_power, type = 'l', xlab = "", ylab = "Global active power (kilowatts)")
 #turn off device
 dev.off()
 

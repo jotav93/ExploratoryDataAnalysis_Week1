@@ -1,3 +1,6 @@
+#set local english
+Sys.setlocale("LC_ALL","English")
+
 #import the data
 df <- read.csv("household_power_consumption.txt",sep = ";", stringsAsFactors = FALSE)
 #add correct column formats

@@ -14,9 +14,11 @@ sub_df <- df[(df$Date >= "2007-02-01") & (df$Date <= "2007-02-02"),]
 #remove from memory previous df
 rm(df)
 #create device
-png(filename ="plot1.png", width = 480, height = 480, units = "px")
+png(filename ="plot2.png", width = 480, height = 480, units = "px")
 #create plot
-plot(sub_df$DateTime, sub_df$Global_active_power, type = 'l', xlab = "", ylab = "Global active power (kilowatts)")
+plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black")
+lines(sub_df$DateTime, sub_df$Sub_metering_2, col = "red")
+lines(sub_df$DateTime, sub_df$Sub_metering_3, col = "blue")
 #turn off device
 dev.off()
 

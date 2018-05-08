@@ -21,7 +21,7 @@ png(filename ="plot4.png", width = 480, height = 480, units = "px")
 #create plot
 par(mfrow = c(2,2))
 #plot 1
-plot(sub_df$DateTime, sub_df$Global_active_power, type = 'l', xlab = "", ylab = "Global active power (kilowatts)")
+plot(sub_df$DateTime, sub_df$Global_active_power, type = 'l', xlab = "", ylab = "Global Active Power")
 #plot 2
 plot(sub_df$DateTime, sub_df$Voltage, type = 'l', xlab = "datetime", ylab = "Voltage")
 

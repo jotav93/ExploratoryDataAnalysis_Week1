@@ -16,8 +16,9 @@ rm(df)
 #create device
 png(filename ="plot3.png", width = 480, height = 480, units = "px")
 #create plot
-plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black")
+plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black", ylab = "Energy sub metering")
 lines(sub_df$DateTime, sub_df$Sub_metering_2, col = "red")
 lines(sub_df$DateTime, sub_df$Sub_metering_3, col = "blue")
+legend("topright", legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"), lty = c(1,1,1))
 #turn off device
 dev.off()

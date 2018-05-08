@@ -16,7 +16,7 @@ rm(df)
 #create device
 png(filename ="plot2.png", width = 480, height = 480, units = "px")
 #create plot
-plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black")
+plot(sub_df$DateTime, sub_df$Sub_metering_1, type = 'l', col = "black", xlab = "", ylab = "Global Active Power (kilowwatts")
 lines(sub_df$DateTime, sub_df$Sub_metering_2, col = "red")
 lines(sub_df$DateTime, sub_df$Sub_metering_3, col = "blue")
 #turn off device
